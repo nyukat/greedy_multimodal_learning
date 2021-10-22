@@ -1,0 +1,33 @@
+# Model
+MMTM_MVCNN.pretraining=False
+MMTM_MVCNN.num_views=2
+
+# Train configuration
+train.batch_size=8
+train.lr=0.1
+train.wd=0.0
+train.momentum=0
+train.callbacks=['CompletedStopping', 'ReduceLROnPlateau_PyTorch', 'Bias_Mitigation_Strong']
+ReduceLROnPlateau_PyTorch.metric='loss'
+CompletedStopping.patience=5
+CompletedStopping.monitor='acc'
+Bias_Mitigation_Strong.epsilon=0.01
+Bias_Mitigation_Strong.curation_windowsize=5
+Bias_Mitigation_Strong.starting_epoch=2
+Bias_Mitigation_Strong.branchnames=['net_view_0', 'net_view_1']
+Bias_Mitigation_Strong.MMTMnames = ['visual', 'skeleton']
+ProgressionCallback.other_metrics=['acc_modal_0', 'acc_modal_1', 'val_acc_modal_0', 'val_acc_modal_1', 'd_BDR', 'curation_mode', 'caring_modality']
+
+
+# Training loop
+training_loop.nummodalities=2
+training_loop.n_epochs=300
+training_loop.use_gpu=True
+training_loop.device_numbers=[0]
+training_loop.checkpoint_monitor='val_acc'
+
+# Dataset
+get_mvdcndata.make_npy_files=False
+get_mvdcndata.num_views=2
+get_mvdcndata.num_workers=0
+get_mvdcndata.specific_views=[0, 6]
