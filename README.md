@@ -2,7 +2,7 @@
 
 We provide the source code for the **balanced multi-modal learning algorithm** proposed in the above paper, along with implementations for the derived metrics, **conditional utilization rate** and **conditional learning speed**. 
 
-[[Paper]](https://arxiv.org/pdf/****.pdf)
+[[Paper]](https://arxiv.org/abs/2202.05306.pdf)
 
 ## Dependencies: 
 * Python 3.8 / gin-config / numpy / pandas / pytorch / scikit-learn / scipy / torchvision / skimage / PIL
@@ -26,11 +26,13 @@ To analysis multi-modal DNNs' *conditional utilization rate*, run the following 
 Please cite this work if you find the analysis or the proposed method useful for your research.
 
 ```
-@inproceedings{wu2022greedymultimodal,
-  title={Characterizing and overcoming the greedy nature of learning in multi-modal deep neural networks},
-  author={Nan Wu, Stanis{\l}aw Jastrz\k{e}bski, Kyunghyun Cho, Krzysztof J. Geras},
-  booktitle={ArXiv},
-  year={2022}
+@misc{wu2022characterizing,
+      title={Characterizing and overcoming the greedy nature of learning in multi-modal deep neural networks}, 
+      author={Nan Wu and Stanisław Jastrzębski and Kyunghyun Cho and Krzysztof J. Geras},
+      year={2022},
+      eprint={2202.05306},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
 }
 ```
 
