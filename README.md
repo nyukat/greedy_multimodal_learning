@@ -2,7 +2,7 @@
 
 We provide the source code for the **balanced multi-modal learning algorithm** proposed in the above paper, along with implementations for the derived metrics, **conditional utilization rate** and **conditional learning speed**. 
 
-[[Paper]](https://arxiv.org/abs/2202.05306.pdf)
+**Accepted by ICML 2022 ** [[Paper]](https://arxiv.org/abs/2202.05306.pdf)
 
 ## Dependencies: 
 * Python 3.8 / gin-config / numpy / pandas / pytorch / scikit-learn / scipy / torchvision / skimage / PIL
